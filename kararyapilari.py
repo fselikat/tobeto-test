@@ -11,3 +11,5 @@ elif Not > 50:
     print("Başarılı")
 else:
     print("Kaldınız")
+
+# github deneme
