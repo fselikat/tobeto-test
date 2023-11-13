@@ -57,7 +57,6 @@ FROM products WHERE units_in_stock>20
 GROUP BY category_id, units_in_stock HAVING COUNT(*)>1;
 
 --250 adetten fazla satılan ürünleri göster
-
 SELECT p.product_name,  SUM(od.quantity)
 FROM order_details od
 INNER JOIN products p ON od.product_id = p.product_id
