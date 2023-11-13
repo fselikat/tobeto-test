@@ -3,7 +3,8 @@ SELECT company_name FROM suppliers
 WHERE EXISTS (SELECT product_name FROM products 
 			 WHERE suppliers.supplier_id=products.supplier_id
 			 AND unit_price<20);
-			 SELECT company_name FROM suppliers
+
+SELECT company_name FROM suppliers
 WHERE NOT EXISTS (SELECT product_name FROM products 
 			 WHERE suppliers.supplier_id=products.supplier_id
 			 AND unit_price=20);
