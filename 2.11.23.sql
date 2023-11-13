@@ -15,6 +15,7 @@ SELECT product_name, category_id, unit_price FROM products
 WHERE unit_price >= 50 OR category_id>5;
 SELECT * FROM products 
 WHERE product_name ='Chai' OR product_name='Chang' OR product_name='Ikura';
+
 --IN()
 --içerisine parametre olarak verilen n kadar veri ile ilgili
 SELECT * FROM products WHERE product_name IN('Chai', 'Chang', 'Ikura');
@@ -55,12 +56,14 @@ SELECT DISTINCT city FROM employees;
 --Ortalamanın altında bir fiyata sahip olan ürünlerimin bilgisini istiyorum.
 
 SELECT AVG(unit_price) FROM products;
+
 SELECT * FROM products WHERE unit_price < 28.83;
 
 SELECT * FROM products WHERE unit_price < (SELECT AVG(unit_price) FROM products);
 
 --En pahalı ürünümün bilgilerini getirelim
 SELECT MAX(unit_price) FROM products;
+
 SELECT * FROM products WHERE unit_price =263.5;
 
 SELECT * FROM products 
